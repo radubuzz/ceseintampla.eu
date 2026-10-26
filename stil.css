@@ -1,0 +1,40 @@
+/* Ce se întâmplă — studio întunecat, lumină caldă (după BB) */
+:root {
+  --negru: #0C0E0F; --carbune: #1B1E1D; --alb: #F3EEE4; --bej: #B9AB95; --chihlimbar: #E0994D; --linie: #2A2D2C;
+  --titlu: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --text: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { background: var(--negru); }
+body { margin: 0; background: var(--negru); color: var(--alb); font-family: var(--text); font-size: 17px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+a { color: var(--chihlimbar); }
+a:focus-visible { outline: 2px solid var(--chihlimbar); outline-offset: 3px; }
+.cap { max-width: 72rem; margin: 0 auto; padding-block: 20px; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; }
+.cap .marca { display: flex; align-items: center; gap: 12px; color: var(--alb); text-decoration: none; font-family: var(--titlu); font-weight: 800; letter-spacing: .02em; text-transform: uppercase; font-stretch: 75%; font-size: 20px; }
+.cap .marca img { width: 40px; height: 40px; border-radius: 50%; }
+.cap nav { display: flex; flex-wrap: wrap; gap: 6px 18px; font-family: var(--mono); font-size: 13px; }
+.cap nav a { color: var(--bej); text-decoration: none; }
+.cap nav a:hover, .cap nav a[aria-current] { color: var(--alb); }
+.erou { max-width: 72rem; margin: 0 auto; }
+.erou img { width: 100%; height: auto; display: block; border-radius: 4px; }
+main { max-width: 42rem; margin: 0 auto; padding-block: 40px 64px; display: grid; gap: 28px; }
+.eticheta { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--bej); }
+h1 { font-family: var(--titlu); font-weight: 900; font-stretch: 62%; text-transform: uppercase; font-size: clamp(36px, 8vw, 60px); line-height: .95; margin: 0; text-wrap: balance; }
+h2 { font-family: var(--titlu); font-weight: 800; font-stretch: 75%; text-transform: uppercase; font-size: 24px; margin: 0; }
+section { display: grid; gap: 12px; }
+p, ul { margin: 0; }
+ul { padding-left: 1.2em; display: grid; gap: 6px; }
+.butoane { display: flex; flex-wrap: wrap; gap: 10px; }
+.buton { display: inline-block; padding: 10px 16px; border: 1px solid var(--chihlimbar); border-radius: 3px; color: var(--alb); text-decoration: none; font-family: var(--mono); font-size: 14px; }
+.buton.plin { background: var(--chihlimbar); color: var(--negru); }
+hr { border: 0; border-top: 1px solid var(--linie); margin: 0; }
+footer { max-width: 72rem; margin: 0 auto; padding-block: 24px 40px; border-top: 1px solid var(--linie); display: flex; flex-wrap: wrap; gap: 8px 20px; font-family: var(--mono); font-size: 12px; color: var(--bej); }
+footer a { color: var(--bej); }
+.en { color: var(--bej); font-size: 15px; }
+main > *, section > * { min-width: 0; }
+p, li { overflow-wrap: anywhere; }
+code { overflow-wrap: anywhere; }
+@media (max-width: 480px) { body { font-size: 16px; } .cap nav { width: 100%; } }
